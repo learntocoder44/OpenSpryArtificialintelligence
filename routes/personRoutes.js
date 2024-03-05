@@ -7,10 +7,7 @@ const router = express.Router();
 
 router.get('/profile', Jwtmiddleware, async (req, res) => {
   try {
-    // Extract user ID from token payload
     const userId = req.user.id;
-
-    // Fetch user profile using the user ID
     const user = await Person.findById(userId);
 
     res.status(200).json({ user });
