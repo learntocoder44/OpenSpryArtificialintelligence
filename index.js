@@ -20,6 +20,8 @@ app.get("/", (req, res) => {
 // Apply personRoutes for handling person-related routes
 app.use('/', personRoutes);
 
-app.listen(3000, () => {
+
+ const port=process.env.PORT;
+app.listen(port, () => {
   console.log("Express server initialized");
 });
