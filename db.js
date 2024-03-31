@@ -1,10 +1,9 @@
 import mongoose from 'mongoose';
 
 
- const mongodbURL='mongodb+srv://durgamabhilash44:8NWHi7ek1dDNbX86@cluster0.qrzadfl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 
 
-mongoose.connect(mongodbURL);
+mongoose.connect(process.env.mongodbURL);
 
 const db=mongoose.connection;
 
